@@ -9,21 +9,21 @@
   <!--Header-->
   <header data-test="header" class="page-header">
     <nav class="navigation">
-      <a class="navigation-logo" href="index.html">
+      <a href="index.html" class="navigation-logo">
         <img src="/images/header/header-logo.svg" width="138" height="64" alt="Логотип туристического сайта городка Седона">
       </a>
       <ul class="navigation-list">
         <li class="navigation-item">
-          <a href="#" class="navigation-link">Главная</a>
+          <a href="index.html" class="navigation-link">Главная</a>
         </li>
         <li class="navigation-item">
           <a href="#" class="navigation-link">О Cедоне</a>
         </li>
         <li class="navigation-item">
-          <a href="#" class="navigation-link navigation-link-current" scr="catalog.html">Гостиницы</a>
+          <a href="catalog.html" class="navigation-link">Гостиницы</a>
         </li>
       </ul>
-      <ul class="navigation-user">
+      <ul class="navigation-list navigation-user">
         <li class="navigation-item">
           <a href="#" class="navigation-link">
             <span class="visually-hidden">Поиск</span>
@@ -31,18 +31,19 @@
         </li>
         <li class="navigation-item">
           <a href="#" class="navigation-link">
-            <span class="visually-hidden">Избранное</span>
+            <span class="visually-hidden">Избранное<span>12</span></span>
           </a>
         </li>
         <li class="navigation-item">
-          <a href="#" class="navigation-link">Хочу сюда</a>
+          <a href="#" class="navigation-link">
+            <span class="button">Хочу сюда</span>
+          </a>
         </li>
       </ul>
     </nav>
   </header>
   <!--Main-->
-    <main data-test="main" class="main-inner">
-      <div class="main-contaiter">
+      <main data-test="main" class="main-inner">
         <div class="main-filter">
           <header class="inner-header">
             <h1 class="inner-header-title">Гостиницы Седоны</h1>
@@ -53,6 +54,9 @@
                 </a>
               </li>
               <li class="breadcrumbs-item">
+                <div></div>
+              </li>
+              <li class="breadcrumbs-item">
                 <a class="breadcrumbs-link">Гостиницы</a>
               </li>
             </ul>
@@ -61,44 +65,46 @@
           <section data-test="filter" class="catalog-products">
             <h2 class="visually-hidden">Фильтр каталога гостиниц</h2>
             <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-              <fieldset class="catalog-filter-group">
-                <legend class="catalog-filter-title">Инфраструктура:</legend>
-                <ul class="catalog-filter-list">
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="checkbox" name="swimming-pool" checked>Бассейн</label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="checkbox" name="parking" checked>Парковка</label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="checkbox" name="Wi-Fi">Wi-Fi</label>
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset class="catalog-filter-group">
-                <legend class="catalog-filter-title">Тип жилья:</legend>
-                <ul class="catalog-filter-list">
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="radio" name="type-of-housing" value="hotel" checked>Гостиница</label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="radio" name="type-of-housing" value="motel">Мотель</label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="radio" name="type-of-housing" value="apartments">Апартаменты</label>
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset class="catalog-filter-group">
+              <div class="catalog-filter-container">
+                <fieldset class="catalog-filter-group-1">
+                  <legend class="catalog-filter-title">Инфраструктура:</legend>
+                  <ul class="catalog-filter-list">
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="checkbox" name="swimming-pool" checked>Бассейн</label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="checkbox" name="parking" checked>Парковка</label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="checkbox" name="Wi-Fi">Wi-Fi</label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <fieldset class="catalog-filter-group-1">
+                  <legend class="catalog-filter-title">Тип жилья:</legend>
+                  <ul class="catalog-filter-list">
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="radio" name="type-of-housing" value="hotel" checked>Гостиница</label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="radio" name="type-of-housing" value="motel">Мотель</label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="control-input" type="radio" name="type-of-housing" value="apartments">Апартаменты</label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </div>
+              <fieldset class="catalog-filter-grou-2">
                 <legend class="catalog-filter-title">Стоимость, ₽:</legend>
               </fieldset>
-              <div class="catalog-filter-container">
+              <div class="catalog-filter-container-button">
                 <button class="button-blue" type="submit">Применить</button>
                 <button class="button-transparent" type="submit">Сбросить</button>
               </div>
@@ -107,20 +113,22 @@
         </div>
         <div class="header-catalog">
           <p class="catalog-title">Найдено гостиниц: <span>38</span></p>
-          <select data-test="catalog" class="select-control" aria-label="Сортировка">
-            <option value="popular">Сначала популярные</option>
-            <option value="cheap">Сначала дешёвые</option>
-            <option value="expensive">Сначала дорогие</option>
-          </select>
-          <a  href="#">
-            <span class="visually-hidden">Показать карточки</span>
-          </a>
-          <a  href="#">
-            <span class="visually-hidden">Показать ленту</span>
-          </a>
-          <a  href="#">
-            <span class="visually-hidden">Показать список</span>
-          </a>
+          <div class="sorting-container">
+            <select data-test="catalog" class="select-control" aria-label="Сортировка">
+              <option value="popular">Сначала популярные</option>
+              <option value="cheap">Сначала дешёвые</option>
+              <option value="expensive">Сначала дорогие</option>
+            </select>
+            <a  href="#" class="catalog-button">
+              <span class="visually-hidden">Показать карточки</span>
+            </a>
+            <a  href="#" class="catalog-button">
+              <span class="visually-hidden">Показать ленту</span>
+            </a>
+            <a  href="#" class="catalog-button">
+              <span class="visually-hidden">Показать список</span>
+            </a>
+          </div>
         </div>
         <!--List of hotels-->
         <ul class="hotels-list">
@@ -175,28 +183,29 @@
                 <span class="hotel-raiting">Рейтинг: 5,0</span>
             </li>
         </ul>
-        <ul class="paginaion">
-          <li class="pagination-item">
-            <a class="pagination-link pagination-current" href="#">1</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">2</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">3</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">4</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link paginaion-disabled" href="#">...</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">10</a>
-          </li>
-        </ul>
-      </div>
-    </main>
+        <div class="paginaion-container">
+          <ul class="paginaion">
+            <li class="pagination-item">
+              <a class="pagination-link pagination-current" href="#">1</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">2</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">3</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">4</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link paginaion-disabled" href="#">...</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">10</a>
+            </li>
+          </ul>
+        </div>
+      </main>
   <!--Footer-->
   <footer data-test="footer" class="page-footer">
     <section class="footer-social">
